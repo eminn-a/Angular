@@ -26,7 +26,7 @@ export class AppComponent {
       name: inputName.value,
       age: Number(inputAge.value),
     };
-    this.users.push(user);
+    this.users = [...this.users, user];
     inputName.value = '';
     inputAge.value = '';
   }
