@@ -19,4 +19,15 @@ export class AppComponent {
       this.title = 'My title changed from Angular!';
     }, 3000);
   }
+
+  addUser(inputName: HTMLInputElement, inputAge: HTMLInputElement) {
+    console.log(inputName.value, inputAge.value);
+    const user: User = {
+      name: inputName.value,
+      age: Number(inputAge.value),
+    };
+    this.users.push(user);
+    inputName.value = '';
+    inputAge.value = '';
+  }
 }
