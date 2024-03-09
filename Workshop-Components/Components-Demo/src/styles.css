@@ -168,15 +168,6 @@ body {
   min-height: 100vh;
 }
 
-.container {
-  width: 90%;
-  margin: auto;
-  padding-bottom: 4.5em;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-evenly;
-}
-
 h2 {
   text-align: center;
   border-bottom: 1px dashed #999;
@@ -193,4 +184,36 @@ button {
 
 button:hover {
   cursor: pointer;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 800px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1280px) {
+  html {
+    font-size: 18px;
+  }
 }
