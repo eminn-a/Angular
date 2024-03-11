@@ -1,6 +1,5 @@
 <div class="spiner">
-    <p>global-loader works!</p>
-    <div>
+    <div *ngIf="globalLoaderService.isHidden">
         <app-spinner />
     </div>
 </div>
