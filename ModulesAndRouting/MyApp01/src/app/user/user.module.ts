@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { GlobalLoaderComponent } from './global-loader/global-loader.component';
+import { UserListComponent } from './user-list/user-list.component';
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-  declarations: [GlobalLoaderComponent],
+  declarations: [UserListComponent],
   imports: [CommonModule, SharedModule],
-  exports: [GlobalLoaderComponent],
+  exports: [UserListComponent],
 })
-export class CoreModule {}
+export class UserModule {}
