@@ -8,13 +8,3 @@ aside {
   margin-top: 1em;
   font-size: 0.8em;
 }
-
-.container {
-  width: 90%;
-  margin: auto;
-  padding-top: 2em;
-  padding-bottom: 6em;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-evenly;
-}
