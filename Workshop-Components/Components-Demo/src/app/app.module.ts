@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PostsItemComponent } from './posts-list/posts-item/posts-item.component';
 import { UserModule } from './user/user.module';
 import { ThemeModule } from './theme/theme.module';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ThemeModule } from './theme/theme.module';
     ThemesListComponent,
     PostsListComponent,
     PostsItemComponent,
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,
