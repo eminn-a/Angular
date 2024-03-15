@@ -3,11 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from '../main/main.component';
 import { AddThemeComponent } from './add-theme/add-theme.component';
 import { CurrentThemeComponent } from './current-theme/current-theme.component';
+import { HomeComponent } from '../home/home.component';
 
 const routes: Routes = [
-  { path: 'themes', component: CurrentThemeComponent },
+  { path: 'themes', component: MainComponent },
   { path: 'add-theme', component: AddThemeComponent },
-  { path: 'home', component: MainComponent },
+  { path: 'home', component: HomeComponent },
 ];
 
 @NgModule({

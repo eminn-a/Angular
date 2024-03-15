@@ -13,6 +13,7 @@ import { PostsItemComponent } from './posts-list/posts-item/posts-item.component
 import { UserModule } from './user/user.module';
 import { ThemeModule } from './theme/theme.module';
 import { ErrorComponent } from './error/error.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -22,15 +23,16 @@ import { ErrorComponent } from './error/error.component';
     PostsListComponent,
     PostsItemComponent,
     ErrorComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     CoreModule,
     SharedModule,
     HttpClientModule,
     UserModule,
     ThemeModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
