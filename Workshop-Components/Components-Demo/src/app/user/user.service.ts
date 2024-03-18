@@ -26,6 +26,7 @@ export class UserService {
       email: 'emin@abv.bg',
       phoneNumber: '123-412-334',
       password: '1234',
+      id: '5fa64ca72183ce1728ff3726',
     };
     localStorage.setItem(this.USER_KEY, JSON.stringify(this.user));
   }
