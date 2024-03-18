@@ -1,8 +1,10 @@
+// import { Post } from './post';
+import { Post } from './post';
 import { User } from './user';
 
 export interface Theme {
   created_at: string;
-  posts: string[];
+  posts: Post[];
   subscribers: string[];
   themeName: string;
   updatedAt: string;
