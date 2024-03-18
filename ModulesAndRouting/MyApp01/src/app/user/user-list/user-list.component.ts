@@ -27,7 +27,6 @@ export class UserListComponent implements OnInit {
     this.globalLoaderServide.showLoader();
     //start fetching
     this.userService.getUsers().subscribe((x) => {
-      console.log(x);
       this.users = x;
       //after fetched
       this.isLoading = false;
