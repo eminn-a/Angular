@@ -7,7 +7,14 @@ import { HomeComponent } from '../home/home.component';
 import { AuthActivate } from '../guards/auth.activate';
 
 const routes: Routes = [
-  { path: 'themes', component: MainComponent },
+  {
+    path: 'themes',
+    children: [
+      { path: '', pathMatch: 'full', component: MainComponent },
+      { path: ':themeId', component: CurrentThemeComponent },
+    ],
+  },
+
   {
     path: 'add-theme',
     component: AddThemeComponent,
