@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../api.service';
-import { Post } from '../types/post';
+import { ApiService } from 'src/app/api.service';
+import { Post } from 'src/app/types/post';
 
 @Component({
   selector: 'app-posts-list',
@@ -12,7 +12,7 @@ export class PostsListComponent implements OnInit {
   isLoading: boolean = true;
   constructor(private api: ApiService) {}
   ngOnInit(): void {
-    this.api.getPosts(5).subscribe((posts) => {
+    this.api.getPosts(5).subscribe((posts: Post[]) => {
       console.log(posts);
       this.posts = posts;
       this.isLoading = false;
