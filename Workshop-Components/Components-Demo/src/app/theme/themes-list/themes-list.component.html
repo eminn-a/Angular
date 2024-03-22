@@ -3,6 +3,9 @@
     <div *ngIf="isLoading" class="loader">
       <app-loader />
     </div>
+
+    <app-welcome-msg *ngIf="!isLoggedIn" />
+
     <!-- theme component  -->
     <div *ngFor="let theme of themes" class="theme-container">
       <div class="theme-name-wrapper">
