@@ -5,13 +5,17 @@
 
       <p class="field field-icon">
         <label for="email"><span><i class="fas fa-envelope"></i></span></label>
-        <input class="input-error" type="email" name="email" id="email" placeholder="john.doe@gmail.com" ngModel
-          #inputEmail="ngModel" />
+        <input type="email" name="email" id="email" placeholder="john.doe@gmail.com" ngModel #inputEmail="ngModel"
+          required [appEmail]="['com','bg']" [class]="!!inputEmail.errors?.['required']?'input-error':null" />
       </p>
-      <p class="error">Email is required!</p>
-      <!-- <p class="error">
-                Email is not valid!
-            </p> -->
+
+      {{inputEmail.errors?.['required'] | json}}
+      <ng-container *ngIf="inputEmail.touched">
+        <p class="error" *ngIf="inputEmail.errors?.['required']">Email is required!</p>
+      </ng-container>
+      <p class="error" *ngIf="inputEmail.errors?.['emailVallidator']">
+        Email is not valid!
+      </p>
 
       <p class="field field-icon">
         <label for="password"><span><i class="fas fa-lock"></i></span></label>
