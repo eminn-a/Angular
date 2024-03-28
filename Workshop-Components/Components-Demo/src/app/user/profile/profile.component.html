@@ -4,18 +4,46 @@
       src="https://png.pngtree.com/element_our/20190601/ourmid/pngtree-character-user-icon-material-image_1338203.jpg"
       alt="default user" />
     <h3>User Info:</h3>
-    <div class="flex">
-      <p>Username:</p>
-      <p>Johny</p>
-    </div>
-    <div class="flex">
-      <p>Email:</p>
-      <p>john.doea&#64;gmail.com</p>
-    </div>
-    <div class="flex">
-      <p>Phone:</p>
-      <p>+359 885 888 888</p>
-    </div>
-    <button class="edit-button">Edit</button>
+
+    <ng-container *ngIf="showEditMode">
+      <div class="flex">
+        <p>Username:</p>
+        <p>{{profileDetails.username}}</p>
+      </div>
+      <div class="flex">
+        <p>Email:</p>
+        <p>{{profileDetails.email}}</p>
+      </div>
+      <div class="flex">
+        <p>Phone:</p>
+        <p>+359 {{profileDetails.tel}}</p>
+      </div>
+      <button class="edit-button" (click)="onEditToggle()">Edit</button>
+    </ng-container>
+
+    <ng-container *ngIf="!showEditMode">
+      <form [formGroup]="form" (ngSubmit)="saveProfileHandler()">
+        <div class="flex">
+          <p>Username: </p>
+          <input type="text" name="username" id="username" [value]="profileDetails.username" formControlName="username">
+        </div>
+        <div class="flex">
+          <p>Email: </p>
+          <input type="email" name="email" id="email" [value]="profileDetails.email" formControlName="email">
+        </div>
+        <div class="flex">
+          <p>Phone: </p>
+          <div>
+            <select name="select-tel" id="select-tel" class="tel">
+              <option value="00359">+359</option>
+            </select>
+            <input type="text" name="tel" id="tel" [value]="profileDetails.tel" formControlName="tel">
+          </div>
+        </div>
+        <button class="red-button" (click)="onEditToggle()">Cancel</button>
+        <button class="green-button">Save</button>
+      </form>
+    </ng-container>
+
   </div>
 </div>

@@ -18,3 +18,9 @@ export interface UserForAuth {
   password: string;
   id: string;
 }
+
+export interface ProfileDetalis {
+  username: string;
+  email: string;
+  tel: string;
+}
