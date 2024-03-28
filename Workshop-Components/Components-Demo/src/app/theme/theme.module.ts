@@ -8,6 +8,7 @@ import { SharedModule } from '../shared/shared.module';
 import { PostsListComponent } from './posts-list/posts-list.component';
 import { MainComponent } from './main/main.component';
 import { PostsItemComponent } from './posts-list/posts-item/posts-item.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,6 @@ import { PostsItemComponent } from './posts-list/posts-item/posts-item.component
     MainComponent,
     PostsItemComponent,
   ],
-  imports: [CommonModule, ThemeRoutingModule, SharedModule],
+  imports: [CommonModule, ThemeRoutingModule, SharedModule, FormsModule],
 })
 export class ThemeModule {}
