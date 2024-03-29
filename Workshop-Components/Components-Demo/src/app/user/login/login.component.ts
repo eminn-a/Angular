@@ -18,7 +18,7 @@ export class LoginComponent {
     if (form.invalid) {
       return;
     }
-    // ev.preventDefault();
+
     this.userService.login();
     this.router.navigate(['/themes']);
   }
